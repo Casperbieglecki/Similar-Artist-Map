@@ -1,7 +1,7 @@
 # Artist Map
 
 Type in a few artists you like and watch a force-directed map of similar
-artists grow around them. Similarity comes from Last.fm; artists similar to
+artists grow around them. Similarity comes from Last.fm API; artists similar to
 more than one of your seeds get pulled toward the centre.
 
 This is **v1 (lean MVP)**: plain labelled nodes, similarity-weighted edges,
@@ -15,13 +15,10 @@ previews are designed-for but not yet built.
 
 ## 1. Get a free Last.fm API key
 
-Takes ~30 seconds: https://www.last.fm/api/account/create
-Copy the **API key** it gives you.
+https://www.last.fm/api/account/create
+Copy the **API key**
 
 ## 2. Run the backend
-
-> Note: this machine's Homebrew `python3` is currently broken (a `pyexpat`
-> error after a macOS update), so use the system Python at `/usr/bin/python3`.
 
 ```bash
 cd backend
