@@ -140,6 +140,7 @@ export default function Graph({ data, width, height }: Props) {
         const s = link.source;
         const t = link.target;
         if (!s || !t || typeof s !== "object" || typeof t !== "object") return;
+        if (![s.x, s.y, t.x, t.y].every(Number.isFinite)) return;
         const connector = isConnectorLink(link);
 
         let color: string;
@@ -175,6 +176,7 @@ export default function Graph({ data, width, height }: Props) {
       }}
       // ---- Glowing orb nodes ----
       nodeCanvasObject={(node: any, ctx: any, scale: number) => {
+        if (!Number.isFinite(node.x) || !Number.isFinite(node.y)) return;
         const focused = inFocus(node.id);
         const r = node.size;
         const hex = hexOf(node);
