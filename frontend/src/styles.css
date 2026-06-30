@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0d0d12;
+  color: #e8e8f0;
+}
+
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 18px 24px;
+  background: linear-gradient(180deg, rgba(13, 13, 18, 0.92) 0%, rgba(13, 13, 18, 0) 100%);
+  pointer-events: none;
+}
+
+header > * {
+  pointer-events: auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  margin: 2px 0 12px;
+  font-size: 13px;
+  color: #9a9ab0;
+}
+
+.seed-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+input {
+  background: #1b1b25;
+  border: 1px solid #2e2e3c;
+  color: #e8e8f0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  min-width: 220px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #5ad1ff;
+}
+
+button {
+  background: #1b1b25;
+  border: 1px solid #2e2e3c;
+  color: #e8e8f0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  border-color: #5ad1ff;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+button.build {
+  background: #ff5c8a;
+  border-color: #ff5c8a;
+  color: #0d0d12;
+  font-weight: 600;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #1b1b25;
+  border: 1px solid #2e2e3c;
+  border-radius: 999px;
+  padding: 4px 6px 4px 12px;
+  font-size: 13px;
+}
+
+.chip button {
+  padding: 0;
+  width: 18px;
+  height: 18px;
+  line-height: 1;
+  border-radius: 50%;
+  border: none;
+  background: #2e2e3c;
+}
+
+.error {
+  margin-top: 10px;
+  color: #ff8080;
+  font-size: 13px;
+}
+
+.hint {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #7a7a90;
+}
+
+.empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #56566a;
+  font-size: 15px;
+}
